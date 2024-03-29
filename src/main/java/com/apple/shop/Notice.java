@@ -10,6 +10,6 @@ public class Notice {
     Integer id;
 
     @Column(columnDefinition = "TEXT")
-    String title;
+    public String title;
     Date date;
 }
