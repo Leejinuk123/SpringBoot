@@ -20,6 +20,12 @@ public class BasicController {
         return "이진욱입니다.";
     }
 
+    @GetMapping("/github") //메인페이지로 접속하면
+    @ResponseBody
+    String githublink(){ //함수 실행
+        return "https://github.com/Leejinuk123/SpringBoot";
+    }
+
     @GetMapping("/date") //메인페이지로 접속하면
     @ResponseBody
     String date(){ //함수 실행
