@@ -25,7 +25,7 @@ public class BasicController {
     String date(){ //함수 실행
         LocalDateTime currentDateTime = LocalDateTime.now();
         System.out.println("현재 날짜와 시간: " + currentDateTime);
-        return "현재 날짜와 시간:" + currentDateTime; //흠~
+        return "현재 날짜와 시간:" + currentDateTime;
 
     }
 
