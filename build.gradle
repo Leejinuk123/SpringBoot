@@ -20,6 +20,11 @@ dependencies {
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	//runtimeOnly 'com.mysql:mysql-connector-j' //mysql서버 접속을 도와주는 라이브러리
+	runtimeOnly 'org.postgresql:postgresql' //아마도 postgresql 접속을 도와주는 라이브러리
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	//java코드로 데이터 입출력가능 ORM라이브러리 ORM쓰면 입출력 속도는 줄어든다.
+	//JPA는 Java의 ORM 표준 문법 , Hibernate는 JPA의 구현체이다.
 }
 
 tasks.named('test') {

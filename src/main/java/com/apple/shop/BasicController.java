@@ -17,13 +17,15 @@ public class BasicController {
     @GetMapping("/about") //메인페이지로 접속하면
     @ResponseBody
     String about(){ //함수 실행
-        return "이진욱입니다.";
+        return "이진욱입니다." +
+                "<a href=\"http://localhost:8080\"><p>index로 가기</p> </a>";
     }
 
     @GetMapping("/github") //메인페이지로 접속하면
     @ResponseBody
     String githublink(){ //함수 실행
-        return "https://github.com/Leejinuk123/SpringBoot";
+        return "https://github.com/Leejinuk123/SpringBoot" +
+                "<a href=\"http://localhost:8080\"><p>index로 가기</p> </a>";
     }
 
     @GetMapping("/date") //메인페이지로 접속하면
@@ -31,7 +33,8 @@ public class BasicController {
     String date(){ //함수 실행
         LocalDateTime currentDateTime = LocalDateTime.now();
         System.out.println("현재 날짜와 시간: " + currentDateTime);
-        return "현재 날짜와 시간:" + currentDateTime;
+        return "현재 날짜와 시간:" + currentDateTime + " " +
+                "<a href=\"http://localhost:8080\"><p>index로 가기</p> </a>";
 
     }
 

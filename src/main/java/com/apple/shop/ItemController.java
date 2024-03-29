@@ -15,6 +15,4 @@ public class ItemController {
         //model.addAttribute()
         return "list.html";
     }
-
-
 }
