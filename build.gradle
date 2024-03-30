@@ -25,6 +25,9 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	//java코드로 데이터 입출력가능 ORM라이브러리 ORM쓰면 입출력 속도는 줄어든다.
 	//JPA는 Java의 ORM 표준 문법 , Hibernate는 JPA의 구현체이다.
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	//lombok 라이브러리
 }
 
 tasks.named('test') {
