@@ -15,7 +15,7 @@ import java.util.List;
 @RequiredArgsConstructor //Lombok 문법이다.
 public class ItemController {
 
-    private final ItemRepository itemRepository;
+
 
     /*
     private final ItemRepository itemRepository;
@@ -24,17 +24,17 @@ public class ItemController {
         this.itemRepository = itemRepository;
     }
     */
+    private final ItemRepository itemRepository;
 
     @GetMapping("/list")
     String list(Model model){
 
         List<Item> result = itemRepository.findAll(); //Item Object형태로 가져온다.
-        System.out.println(result.get(0).title);
-        System.out.println(result.get(0).price);
-
+        System.out.println(result);
         //List<Object> a = new ArrayList<>();
 
-        model.addAttribute("name","청바지");
+        model.addAttribute("items",result);
+
         //model.addAttribute()
         return "list.html";
     }

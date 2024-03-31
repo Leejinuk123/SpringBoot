@@ -6,11 +6,32 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link href="/list.css" rel="stylesheet">
+
 </head>
 <body>
-    <div>
+    <div class="product" th:each="item:${items}">
+        <h2 th:text="${item.title}">물품 1</h2>
+        <h3 th:text="${item.price}">가격 : 3500</h3>
+        <img src="https://placehold.co/300">
+        <p>물품 1에 대한 설명이 여기에 들어갑니다.</p>
+    </div>
+<!--    <div class="product">-->
+<!--        <h2 th:text="${items[1].title}">물품 1</h2>-->
+<!--        <h3 th:text="${items[1].price}">가격 : 3500</h3>-->
+<!--        <img src="https://placehold.co/300">-->
+<!--        <p>물품 2에 대한 설명이 여기에 들어갑니다.</p>-->
+<!--    </div>-->
+<!--    <div class="product">-->
+<!--        <h2 th:text="${items[2].title}">물품 1</h2>-->
+<!--        <h3 th:text="${items[2].price}">가격 : 3500</h3>-->
+<!--        <img src="https://placehold.co/300">-->
+<!--        <p>물품 3에 대한 설명이 여기에 들어갑니다.</p>-->
+<!--    </div>-->
+
+    <div style="clear: both">
         <img>
-        <h4 th:text="${name}">바지</h4>
+        <h4>바지</h4>
         <p>4만원</p>
     </div>
     <div>
@@ -24,5 +45,6 @@
         <a href="http://localhost:8080/github"><p>github로 가기</p> </a>
         <a href="http://localhost:8080/date"><p>date로 가기</p> </a>
     </div>
+
 </body>
 </html>

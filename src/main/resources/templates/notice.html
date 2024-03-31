@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .notice{
+        width: 50%;
+        border: 1px solid black;
+        margin: 0 auto;
+        display: flex;
+    }
+    .notice_data{
+        flex: 1;
+        text-align: center;
+        border: 1px solid black;
+        border-bottom: 0px;
+        border-top: 0px;
+        margin : 0 auto;
+        padding: 10px;
+    }
+</style>
+<body>
+    <div>
+
+        <div class="notice" th:each="notice:${notices}">
+            <p class="notice_data" th:text="${notice.id}">글번호</p>
+            <p class="notice_data" th:text="${notice.title}">글내용글내용글내용글내용글내용글내용내용글내용내용글내용내용글내용글내용</p>
+            <p class="notice_data" th:text="${notice.date}">작성날짜</p>
+        </div>
+
+    </div>
+</body>
+</html>
