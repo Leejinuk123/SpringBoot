@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link href="list.css" rel="stylesheet">
 </head>
 <style>
     .notice{
@@ -25,23 +26,18 @@
     }
 </style>
 <body>
-    <div>
-        <h4>notice페이지입니다.</h4>
-        <a href="http://localhost:8080/list"><p>list로 가기</p> </a>
-        <a href="http://localhost:8080"><p>index로 가기</p> </a>
-        <!--        <a href="http://localhost:8080/about"><p>about으로 가기</p> </a>-->
-        <!--        <a href="http://localhost:8080/github"><p>github로 가기</p> </a>-->
-        <!--        <a href="http://localhost:8080/date"><p>date로 가기</p> </a>-->
-    </div>
 
-    <div>
-        <a href="http://localhost:8080" style="width: 50%"><p>기본페이지로.</p></a>
-        <div class="notice" th:each="notice:${notices}">
-            <p class="notice_data" th:text="${notice.id}">글번호</p>
-            <p class="notice_data" th:text="${notice.title}">글내용글내용글내용글내용글내용글내용내용글내용내용글내용내용글내용글내용</p>
-            <p class="notice_data" th:text="${notice.date}">작성날짜</p>
-        </div>
+<div th:replace="~{nav.html::navbar}"></div>
 
+<h4>notice입니다.</h4>
+
+<div>
+    <div class="notice" th:each="notice:${notices}">
+        <p class="notice_data" th:text="${notice.id}">글번호</p>
+        <p class="notice_data" th:text="${notice.title}">글내용글내용글내용글내용글내용글내용내용글내용내용글내용내용글내용글내용</p>
+        <p class="notice_data" th:text="${notice.date}">작성날짜</p>
     </div>
+</div>
+
 </body>
 </html>

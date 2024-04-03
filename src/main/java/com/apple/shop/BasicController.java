@@ -15,11 +15,6 @@ public class BasicController {
         return "index.html";
     }
 
-    @GetMapping("/detail")
-    String detail(){
-        return "detail.html";
-    }
-
 //    @GetMapping("/about") //메인페이지로 접속하면
 //    @ResponseBody
 //    String about(){ //함수 실행

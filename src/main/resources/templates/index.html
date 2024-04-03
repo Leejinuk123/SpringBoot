@@ -6,51 +6,13 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link href="index.css" rel="stylesheet">
+    <link href="list.css" rel="stylesheet">
 </head>
-<style>
-    .chat_box{
-        display: inline-block;
-        width: 500px;
-        height: 500px;
-        border : 1px solid red;
-    }
-    .message_box{
-        display: block;
-        width: 100%;
-        height: fit-content;
-    }
-    .message{
-        margin: 10px;
-        height: fit-content;
-        display: inline-block;
-        border-radius: 10px;
-        clear: both;
-    }
-    .send{
-        background-color: wheat;
-        float: right;
-        border-radius: 10px 10px 0px 10px;
-    }
-    .get{
-        background-color: #c1c165;
-        float: left;
-        border-radius: 10px 10px 10px 0px;
-    }
-    .message p{
-        margin: 10px 20px;
-    }
-</style>
 <body>
+    <div th:replace="~{nav.html::navbar}"></div>
 
-    <div>
-        <h4>메인페이지입니다.</h4>
-        <a href="http://localhost:8080/list"><p>list로 가기</p> </a>
-        <a href="http://localhost:8080/notice"><p>notice로 가기</p> </a>
-        <a href="http://localhost:8080/detail"><p>detail로 가기</p> </a>
-        <!--        <a href="http://localhost:8080/about"><p>about으로 가기</p> </a>-->
-        <!--        <a href="http://localhost:8080/github"><p>github로 가기</p> </a>-->
-        <!--        <a href="http://localhost:8080/date"><p>date로 가기</p> </a>-->
-    </div>
+    <h4>index입니다.</h4>
 
     <div class="chat_box">
 

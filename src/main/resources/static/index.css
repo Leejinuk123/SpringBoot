@@ -1,0 +1,31 @@
+.chat_box{
+    display: inline-block;
+    width: 500px;
+    height: 500px;
+    border : 1px solid red;
+}
+.message_box{
+    display: block;
+    width: 100%;
+    height: fit-content;
+}
+.message{
+    margin: 10px;
+    height: fit-content;
+    display: inline-block;
+    border-radius: 10px;
+    clear: both;
+}
+.send{
+    background-color: wheat;
+    float: right;
+    border-radius: 10px 10px 0px 10px;
+}
+.get{
+    background-color: #c1c165;
+    float: left;
+    border-radius: 10px 10px 10px 0px;
+}
+.message p{
+    margin: 10px 20px;
+}
